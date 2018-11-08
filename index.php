@@ -26,4 +26,8 @@ $app->get('/hello/{name}', function ($request, $response, $args) {
     return $this->renderer->render($response, "/hello.php", $args);
 });
 
+$app->get('/lista', function ($request, $response, $args) {
+    echo table();
+});
+
 $app->run();
